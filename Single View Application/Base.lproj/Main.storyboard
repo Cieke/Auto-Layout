@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Single_View_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,77 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kad-Jl-cV0">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hid-K5-u0F"/>
+                                </constraints>
+                                <state key="normal" title="Load Game"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rez-3T-pq6">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bPs-0K-e7E"/>
+                                </constraints>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <segue destination="PiR-nc-Wr9" kind="presentation" id="RL9-sd-Dsb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdP-mJ-bir">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tFX-LI-nxG"/>
+                                </constraints>
+                                <state key="normal" title="Help"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kad-Jl-cV0" firstAttribute="top" secondItem="Rez-3T-pq6" secondAttribute="bottom" constant="8" id="4UR-0D-ZpC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kad-Jl-cV0" secondAttribute="leading" id="60J-rw-7UG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="KdP-mJ-bir" secondAttribute="leading" id="AJ5-53-Anr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rez-3T-pq6" secondAttribute="leading" id="Qs9-j5-xVk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rez-3T-pq6" secondAttribute="leading" id="Zaz-sU-UMe"/>
+                            <constraint firstItem="KdP-mJ-bir" firstAttribute="top" secondItem="kad-Jl-cV0" secondAttribute="bottom" constant="8" id="ca6-C6-J6p"/>
+                            <constraint firstItem="kad-Jl-cV0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lIO-fq-9Ac"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rez-3T-pq6" secondAttribute="trailing" id="nAB-lm-cYz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KdP-mJ-bir" secondAttribute="trailing" id="tH8-6W-nr4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kad-Jl-cV0" secondAttribute="trailing" id="vLK-xg-XG2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rez-3T-pq6" secondAttribute="leading" id="vYS-Rw-OfI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zB2-Ao-yg0">
+            <objects>
+                <viewController id="PiR-nc-Wr9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zpi-9E-j9S"/>
+                        <viewControllerLayoutGuide type="bottom" id="AYl-L0-rCe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="01a-kf-kek">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txD-Cx-6AP">
+                                <frame key="frameInset" minX="16" minY="617" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77704252210000002" green="0.76505199150000003" blue="0.78347922120000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ka9-cN-M6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.79999999999995" y="126.38680659670166"/>
         </scene>
     </scenes>
 </document>
